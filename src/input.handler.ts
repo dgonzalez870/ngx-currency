@@ -89,8 +89,8 @@ export class InputHandler {
             case undefined:
             case 9:
             case 13:
-            case 37:
-            case 39:
+            // case 37:
+            // case 39:
                 return;
             case 43:
                 this.inputService.changeToPositive();
