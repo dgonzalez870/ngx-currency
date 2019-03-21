@@ -22,7 +22,7 @@ export class InputHandler {
         let keyCode = this.inputService.rawValue.charCodeAt(this.inputService.rawValue.length - 1);
         let rawValueLength = this.inputService.rawValue.length;
         let rawValueSelectionEnd = this.inputService.inputSelection.selectionEnd;
-        let storedRawValueLength = this.inputService.storedRawValue.length;
+        let storedRawValueLength = this.inputService.storedRawValue && this.inputService.storedRawValue.length || 0;
         this.inputService.rawValue = this.inputService.storedRawValue;
 
         if (rawValueLength != rawValueSelectionEnd || Math.abs(rawValueLength - storedRawValueLength) != 1) {
